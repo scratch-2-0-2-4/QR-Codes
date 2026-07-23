@@ -38,12 +38,23 @@ def run():
         else:
             # Image PNG
             print(f"Couleurs disponibles: {', '.join(couleurs)}")
-            fill_color = input("Couleur du QR [défaut: black] >>> ") or "black"
-            back_color = input("Couleur du fond [défaut: white] >>> ") or "white"
+            
+            while True:
+                fill_color = input("Couleur du QR [défaut: black] >>> ") or "black"
+                if fill_color in couleurs or fill_color.startswith("#"):
+                    break
+                print(f"❌ Couleur invalide! Choisis parmi: {', '.join(couleurs)}")
+            
+            while True:
+                back_color = input("Couleur du fond [défaut: white] >>> ") or "white"
+                if back_color in couleurs or back_color.startswith("#"):
+                    break
+                print(f"❌ Couleur invalide! Choisis parmi: {', '.join(couleurs)}")
             
             img = qr.make_image(fill_color=fill_color, back_color=back_color)
-            img.save("qrcode.png")
-            print("✅ QR Code sauvegardé en qrcode.png")
+            filename = f"{url}.png"
+            img.save(filename)
+            print(f"✅ QR Code sauvegardé en {filename}")
         
         print()
 
