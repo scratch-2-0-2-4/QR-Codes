@@ -10,7 +10,7 @@ git clone https://github.com/scratch-2-0-2-4/QR-Codes.git
 ```Bash
 cd QR-Codes
 ```
-4. Installer le paquet `qrcode` :
+3. Installer le paquet `qrcode` :
 
    **MacOS / Linux :**
    ```bash
@@ -22,7 +22,7 @@ cd QR-Codes
    pip install "qrcode[pil]"
    ```
 
-5. Lancer le programme :
+4. Lancer le programme :
 
    **MacOS / Linux :**
    ```bash
