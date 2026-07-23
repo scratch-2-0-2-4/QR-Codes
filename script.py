@@ -11,6 +11,7 @@ def run():
     couleurs = ["black", "white", "red", "green", "blue", "yellow", "cyan", "magenta"]
     
     while True:
+        print(" QR Codes -- v. 2.0")
         print("Choisis :")
         print("1. ASCII")
         print("2. Image (PNG)")
