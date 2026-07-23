@@ -5,7 +5,7 @@ def run():
         import qrcode
     except ImportError:
         print("❌ qrcode non installé!")
-        print("Installe avec: pip3 install \"qrcode[pil]\"")
+        print("Installe avec: pip3 install \"qrcode[pil]\" (MacOS / Linux) ou pip install \"qrcode[pil]\" windows.")
         return
     
     couleurs = ["black", "white", "red", "green", "blue", "yellow", "cyan", "magenta"]
