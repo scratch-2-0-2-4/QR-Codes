@@ -14,7 +14,7 @@ def run():
             continue
         
         if url.lower() == "exit":
-            print("Au revoir! 👋")
+            print("Au revoir !")
             break
         
         qr = qrcode.QRCode(version=1, box_size=10, border=4)
