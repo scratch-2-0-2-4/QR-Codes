@@ -14,12 +14,12 @@ cd QR-Codes
 
    **MacOS / Linux :**
    ```bash
-   pip3 install qrcode[pil]
+   pip3 install "qrcode[pil]"
    ```
 
    **Windows**
    ```bash
-   pip install qrcode[pil]
+   pip install "qrcode[pil]"
    ```
 
 5. Lancer le programme :
