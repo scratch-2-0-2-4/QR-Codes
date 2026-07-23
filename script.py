@@ -9,10 +9,10 @@ def run():
     couleurs = ["black", "white", "red", "green", "blue", "yellow", "cyan", "magenta"]
     
     while True:
-        print("\n=== QR Code Generator ===")
+        print("Choisis :")
         print("1. ASCII")
         print("2. Image (PNG)")
-        choice = input("Choix (1 ou 2) >>> ")
+        choice = input("Choix (1/2) >>> ")
         
         if choice not in ["1", "2"]:
             print("❌ Choix invalide!")
