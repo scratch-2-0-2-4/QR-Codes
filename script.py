@@ -1,3 +1,5 @@
+import re
+
 def run():
     try:
         import qrcode
@@ -52,9 +54,20 @@ def run():
                 print(f"❌ Couleur invalide! Choisis parmi: {', '.join(couleurs)}")
             
             img = qr.make_image(fill_color=fill_color, back_color=back_color)
-            filename = f"{url}.png"
+            
+            # --- MODIFICATION ICI ---
+            # 1. Remplace tous les caractères non valides pour un fichier par "_"
+            safe_name = re.sub(r'[^\w\-.]', '_', url)
+            
+            # 2. Raccourcit le nom si l'URL est très longue (max 30 caractères)
+            if len(safe_name) > 30:
+                safe_name = safe_name[:30]
+                
+            filename = f"{safe_name}.png"
+            # ------------------------
+            
             img.save(filename)
-            print(f"✅ QR Code sauvegardé en {filename}")
+            print(f"✅ QR Code sauvegardé en : {filename}")
         
         print()
 
