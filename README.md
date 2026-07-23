@@ -51,3 +51,9 @@ cd QR-Codes
 pip install qrcode[pil]
 python script.py
 ```
+
+### Mise à jour :
+```Bash
+cd QR-Codes
+git pull origin main
+```
