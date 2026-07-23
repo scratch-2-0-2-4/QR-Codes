@@ -40,7 +40,7 @@ cd QR-Codes
 ```bash
 git clone https://github.com/scratch-2-0-2-4/QR-Codes.git
 cd QR-Codes
-pip3 install qrcode[pil]
+pip3 install "qrcode[pil]"
 python3 script.py
 ```
 
@@ -48,7 +48,7 @@ python3 script.py
 ```bash
 git clone https://github.com/scratch-2-0-2-4/QR-Codes.git
 cd QR-Codes
-pip install qrcode[pil]
+pip install "qrcode[pil]"
 python script.py
 ```
 
